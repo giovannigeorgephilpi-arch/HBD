@@ -3,7 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 }
-body {
+main {
   background-image: url(./Images/download.jpg);
   background-repeat: no-repeat;
   background-size: 100vw, 130vh;
@@ -29,7 +29,7 @@ p {
   display: flex;
   justify-content: space-around;
   margin-top: 20rem;
-  height: 80rem;
+  height: 60rem;
 }
 
 .balloon1 {
@@ -79,9 +79,10 @@ p {
   background-image: url(./Images/message.png);
   background-repeat: no-repeat;
   background-size: cover;
+  max-height: 60rem;
 }
 .btn {
-  margin-top: 30em;
+  margin-top: 15em;
   cursor: pointer;
   height: 3em;
 }
