@@ -7,9 +7,8 @@ main {
   background-image: url(./Images/download.jpg);
   background-repeat: no-repeat;
   background-size: 100vw, 130vh;
-  background-position: top;
+  background-position: center;
 }
-
 .image {
   width: 100vw;
   display: flex;
@@ -31,7 +30,6 @@ p {
   margin-top: 20rem;
   height: 60rem;
 }
-
 .balloon1 {
   width: 40em;
   height: 60em;
@@ -39,16 +37,15 @@ p {
 
 .balloon1 {
   width: 30em;
-  /* position: absolute; */
 
   animation: sway 4s ease-in-out infinite;
   transform-origin: bottom center;
 }
 
-/* .balloon1 {
+.balloon1 {
   left: 20%;
   top: 25%;
-} */
+}
 
 .balloon1 {
   left: 50%;
@@ -56,24 +53,10 @@ p {
   animation-duration: 5s;
 }
 
-/* .balloon1 {
-  left: 75%;
-  top: 30%;
-  animation-duration: 3.5s;
-} */
-
 @keyframes sway {
-  /* 0% {
-    transform: rotate(-4deg) translateX(0px);
-  } */
-
   50% {
     transform: rotate(4deg) translateX(10px);
   }
-
-  /* 100% {
-    transform: rotate(-4deg) translateX(0px);
-  } */
 }
 .message {
   background-image: url(./Images/message.png);
@@ -82,7 +65,12 @@ p {
   max-height: 60rem;
 }
 .btn {
-  margin-top: 15em;
+  margin: 15em;
   cursor: pointer;
   height: 3em;
+}
+
+.video_container {
+  min-width: 100%;
+  min-height: 100%;
 }
