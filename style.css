@@ -92,6 +92,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   min-height: 100vh;
+  overflow-y: scroll;
 }
 
 .image {
@@ -113,7 +114,7 @@ p {
 
 .balloons {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   margin-top: 4rem;
   height: 24rem;
 }
@@ -142,17 +143,61 @@ p {
   }
 }
 
-.message {
-  background-image: url(./Images/message.png);
+/* .message {
+  background-image: url(./Images/ChatGPT_Image_Jun_12__2026__10_10_45_AM-removebg-preview.png);
   background-repeat: no-repeat;
-  background-size: cover;
-  width: 90%;
-  max-width: 500px;
-  height: auto;
+  background-size: contain;
+  background-position: top;
+  width: 60%;
+  height: 300px;
+} */
+
+.message {
+  background-image: url("./Images/image1.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 52% center;
+
+  width: 60%;
+  height: 300px;
+  margin: 20px auto;
 }
 
 .btn {
-  margin: 3em;
+  margin-top: 3em;
   cursor: pointer;
   height: 2.5em;
+}
+.container {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  display: flex;
+}
+
+.container img {
+  position: absolute;
+  width: 250px;
+  height: 100%;
+  object-fit: contain;
+}
+
+.img2 {
+  opacity: 0;
+}
+
+/* Animation for the rolled scroll */
+.drop {
+  animation: dropAway 1s forwards;
+}
+
+@keyframes dropAway {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(200px);
+    opacity: 0;
+  }
 }
