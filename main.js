@@ -8,7 +8,7 @@ btn.addEventListener("click", () => {
   setTimeout(() => {
     img1.style.display = "none";
     img2.style.opacity = "1";
-    img2.style.height = "600px";
-    img2.style.width = "350px";
+    img2.style.height = "400px";
+    img2.style.width = "250px";
   }, 1000);
 });

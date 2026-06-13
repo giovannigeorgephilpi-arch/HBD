@@ -161,31 +161,38 @@ p {
   margin-top: 30px;
 }
 
-.balloons {
+/* .balloons {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 4rem;
   height: 24rem;
-  width: 100%;
+  width: 50%;
 }
 
-.balloon1 {
+ .balloon1 {
   width: 12em;
   height: 22rem;
   animation: sway 4s ease-in-out infinite;
   transform-origin: bottom center;
+}
+.balloon2 {
+  width: 12em;
+  height: 22rem;
+  animation: sway 4s ease-in-out infinite;
+  transform-origin: bottom center;
+  margin-left: 5px;
 }
 
 @keyframes sway {
   50% {
     transform: rotate(4deg) translateX(10px);
   }
-}
+} 
 
 .container {
   position: relative;
-  width: 250px;
+  width: 150px;
   height: 300px;
   display: flex;
   justify-content: center;
@@ -196,14 +203,16 @@ p {
   position: absolute;
   width: 250px;
   height: 90%;
-  object-fit: contain;
-  margin-left: 25px;
+
+  margin: 100px;
 }
 
 .img2 {
   opacity: 0;
-
+  width: 120px;
+  height: 450px;
   margin-top: 120px;
+  margin-left: 30px;
 }
 
 .drop {
@@ -220,13 +229,110 @@ p {
     opacity: 0;
   }
 }
+*/
 .balloons {
+  position: relative;
+  width: 50%;
+  min-width: 280px;
+  height: 24rem;
+  margin: 4rem auto;
+}
+
+.balloon1,
+.balloon2 {
+  position: absolute;
+  width: 12em;
+  height: 22rem;
+  max-width: 12rem;
+  max-height: 100%;
+  animation: sway 4s ease-in-out infinite;
+  transform-origin: bottom center;
+  z-index: 1;
+  animation: sway 4s ease-in-out infinite;
+  transform-origin: bottom center;
+}
+@keyframes sway {
+  50% {
+    transform: rotate(4deg) translateX(10px);
+  }
+}
+
+.balloon1 {
+  left: 0;
+  top: 0;
+}
+.balloon2 {
+  right: 0;
+  top: 0;
+}
+
+.container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 250px;
+  height: 400px;
   display: flex;
-  justify-content: space-between;
-  margin-top: 4rem;
-  margin-bottom: 6rem;
-  width: 100%;
-  /* remove height: 24rem */
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.container img {
+  position: absolute;
+  width: 250px;
+  height: 300px;
+  max-height: 90%;
+}
+
+.img2 {
+  opacity: 0;
+}
+
+.drop {
+  animation: dropAway 1s forwards;
+}
+
+@keyframes dropAway {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(200px);
+    opacity: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .balloons {
+    width: 90%;
+    height: 18rem;
+  }
+  .balloon1,
+  .balloon2 {
+    width: 8em;
+  }
+  .container {
+    width: 180px;
+    height: 400px;
+  }
+}
+
+@media (max-width: 480px) {
+  .balloons {
+    height: 14rem;
+  }
+  .balloon1,
+  .balloon2 {
+    width: 6em;
+  }
+  .container {
+    width: 130px;
+    height: 400px;
+  }
 }
 
 .album {
@@ -247,8 +353,8 @@ p {
   padding: 1em;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
   transform: rotate(-2deg);
-  width: 300px;
-  height: 400px;
+  width: 200px;
+  height: 300px;
 }
 .vintage-frame {
   position: relative;
@@ -256,14 +362,15 @@ p {
   box-shadow:
     0 0 0 1px #c9a96a,
     0 6px 12px rgba(0, 0, 0, 0.4);
-  margin: 15x;
-  width: 280px;
-  height: 400px;
+
+  width: 200px;
+  height: 300px;
   transform: rotate(5deg);
   margin-left: 10px;
-  margin-right: 6px;
+  margin-right: 3px;
+  margin-top: 10px;
 }
 img {
-  margin-left: 10px;
+  margin-left: 15px;
   margin-right: 6px;
 }
