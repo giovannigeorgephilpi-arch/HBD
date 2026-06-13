@@ -232,38 +232,38 @@ p {
 */
 .balloons {
   position: relative;
-  width: 50%;
+  width: 100%;
   min-width: 280px;
   height: 24rem;
   margin: 4rem auto;
+}
+.balloon1 {
+  left: -70px; /* push further left, increase negative value for more space */
+  top: 0;
+}
+.balloon2 {
+  right: -70px; /* push further right */
+  top: 0;
 }
 
 .balloon1,
 .balloon2 {
   position: absolute;
-  width: 12em;
-  height: 22rem;
-  max-width: 12rem;
+  width: 19em; /* increased from 12em */
+  height: 28rem; /* increased from 22rem */
+  max-width: 19rem; /* increased from 12rem */
   max-height: 100%;
   animation: sway 4s ease-in-out infinite;
   transform-origin: bottom center;
   z-index: 1;
   animation: sway 4s ease-in-out infinite;
   transform-origin: bottom center;
+  margin: 20px;
 }
 @keyframes sway {
   50% {
     transform: rotate(4deg) translateX(10px);
   }
-}
-
-.balloon1 {
-  left: 0;
-  top: 0;
-}
-.balloon2 {
-  right: 0;
-  top: 0;
 }
 
 .container {
@@ -283,7 +283,7 @@ p {
 .container img {
   position: absolute;
   width: 250px;
-  height: 300px;
+  height: 200px;
   max-height: 90%;
 }
 
@@ -309,11 +309,11 @@ p {
 @media (max-width: 768px) {
   .balloons {
     width: 90%;
-    height: 18rem;
+    height: 600px;
   }
   .balloon1,
   .balloon2 {
-    width: 8em;
+    width: 600px;
   }
   .container {
     width: 180px;
@@ -332,6 +332,19 @@ p {
   .container {
     width: 130px;
     height: 400px;
+  }
+}
+@media (max-width: 768px) {
+  .balloon1,
+  .balloon2 {
+    width: 11em; /* increased from 8em */
+  }
+}
+
+@media (max-width: 480px) {
+  .balloon1,
+  .balloon2 {
+    width: 8em; /* increased from 6em */
   }
 }
 
@@ -363,14 +376,13 @@ p {
     0 0 0 1px #c9a96a,
     0 6px 12px rgba(0, 0, 0, 0.4);
 
-  width: 200px;
-  height: 300px;
+  width: 185px;
+  height: 250px;
   transform: rotate(5deg);
-  margin-left: 10px;
-  margin-right: 3px;
-  margin-top: 10px;
+  margin-left: 3px;
+  margin-top: 20px;
 }
-img {
+/* img {
   margin-left: 15px;
   margin-right: 6px;
-}
+} */
